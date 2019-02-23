@@ -7,7 +7,7 @@ let balmConfig = require('./balmrc');
 
 balmConfig.scripts = Object.assign(base, {
   entry: {
-    server: './ssr/entry-server.js'
+    server: './app/scripts/entry-server.js'
   },
   // This allows webpack to handle dynamic imports in a Node-appropriate
   // fashion, and also tells `vue-loader` to emit server-oriented code when

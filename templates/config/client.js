@@ -5,7 +5,6 @@ const base = require('./base');
 let balmConfig = require('./balmrc');
 
 balmConfig.server = {
-  open: false,
   proxyContext: '/api',
   proxyOptions: {
     target: 'http://localhost:8088',
@@ -19,7 +18,7 @@ balmConfig.server = {
 balmConfig.scripts = Object.assign(base, {
   entry: {
     lib: ['vue', 'vue-router', 'vuex', 'axios'],
-    client: './ssr/entry-client.js'
+    client: './app/scripts/entry-client.js'
   }
 });
 
