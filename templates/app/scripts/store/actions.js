@@ -34,7 +34,6 @@ export default {
     });
   },
   getNav({ commit, state }) {
-    console.log('get nav');
     return fetch('http://localhost:8088/api/getnav').then(res => {
       commit('GET_NAV', res);
       return res;

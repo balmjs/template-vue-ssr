@@ -5,9 +5,9 @@ const { app, router, store } = createApp();
 Vue.mixin({
   beforeRouteUpdate(to, from, next) {
     const { asyncData } = this.$options;
-    console.log(asyncData);
+    console.log('beforeRouteUpdate', asyncData);
     if (asyncData) {
-      console.log(asyncData);
+      console.log('asyncData', asyncData);
       asyncData({
         store: this.$store,
         route: to
@@ -37,7 +37,7 @@ router.onReady(() => {
 
     // ???
     const asyncDataHooks = activated.map(c => c.asyncData).filter(_ => _);
-    console.log(asyncDataHooks);
+    console.log('asyncDataHooks', asyncDataHooks);
     if (!asyncDataHooks.length) {
       return next();
     }

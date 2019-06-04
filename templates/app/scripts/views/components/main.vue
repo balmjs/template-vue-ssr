@@ -22,17 +22,20 @@ export default {
     };
   },
   beforeMount() {
+    console.log('fetch data by client');
     this.getList().then(res => {
       this.list = res;
     });
   },
-  mounted() {
-    // this.$store.dispatch('getNav'); // NOTE: for SPA
-    console.log(this.$store.state);
-  },
+  // NOTE: for SPA
+  // mounted() {
+  //   console.log('fetch data by client');
+  //   this.$store.dispatch('getNav');
+  // },
+  // NOTE: for SSR
   asyncData({ store }) {
-    console.log('fetch data');
-    return store.dispatch('getNav'); // NOTE: for SSR
+    console.log('fetch data by server');
+    return store.dispatch('getNav');
   },
   methods: {
     ...mapActions(['getList'])
