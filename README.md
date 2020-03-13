@@ -1,4 +1,4 @@
-# BalmJS template - vue-ssr
+# BalmJS template - `vue-ssr`
 
 > A server-rendered Vue project
 
@@ -30,4 +30,4 @@ npm run prod
 npm run start
 ```
 
-> thx [BalmJS](https://balmjs.com/)
+- thx [BalmJS](https://balmjs.com/)
