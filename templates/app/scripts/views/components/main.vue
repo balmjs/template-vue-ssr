@@ -12,7 +12,6 @@ import MyList from '@/views/components/list';
 import { mapActions } from 'vuex';
 
 export default {
-  name: 'App',
   components: {
     MyList
   },
