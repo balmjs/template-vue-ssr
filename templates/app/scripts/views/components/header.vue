@@ -8,7 +8,9 @@
       <li class="header-list-item">Webpack</li>
       <li class="header-list-item">Express</li>
       <li class="header-list-item">Less</li>-->
-      <li class="header-list-item" v-for="item in nav" :key="item">{{item}}</li>
+      <li class="header-list-item" v-for="item in nav" :key="item">
+        {{ item }}
+      </li>
     </ul>
     <p v-else>No Header</p>
   </header>
@@ -18,6 +20,7 @@
 import { mapState } from 'vuex';
 
 export default {
+  name: 'MyHeader',
   computed: {
     ...mapState({
       nav: state => state.nav

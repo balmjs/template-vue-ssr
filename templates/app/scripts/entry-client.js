@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { createApp } from './main';
+import { createApp } from '@/main';
 const { app, router, store } = createApp();
 
 Vue.mixin({

@@ -5,7 +5,7 @@ import App from '@/views/layouts/app';
 import { createRouter } from '@/routes';
 import { createStore } from '@/store';
 import { sync } from 'vuex-router-sync';
-import { DEBUG } from '@/config';
+import { isDev } from '@/config';
 
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
@@ -23,7 +23,7 @@ export function createApp() {
     render: h => h(App)
   };
 
-  if (DEBUG) {
+  if (isDev) {
     options.el = '#dev';
   }
 
